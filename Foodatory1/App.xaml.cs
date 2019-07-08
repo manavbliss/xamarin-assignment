@@ -23,12 +23,18 @@ namespace Foodatory1
                 MainPage = new NavigationPage(new Splash());
 
             }
-
-            public void OnLogin()
+            public void OnSkip()
             {
-                MainPage = new AfterLoginPage();
+                MainPage = new Recipe1();
 
             }
+
+
+            public void OnLogin()
+                {
+                    MainPage = new AfterLoginPage();
+
+                }
 
             public void OnLoginLabel()
             {

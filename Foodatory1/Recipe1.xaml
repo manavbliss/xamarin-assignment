@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodatory1.InventoriesPage" Title="Inventories">
-   <ListView x:Name="listView" ItemSelected="OnItemSelected" RowHeight="60" BackgroundColor="#E4E4E4">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodatory1.Recipe1" Title="Recipes">
+        <ListView x:Name="listView" ItemSelected="OnItemSelected" RowHeight="60" BackgroundColor="#E4E4E4">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

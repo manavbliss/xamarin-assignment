@@ -6,14 +6,17 @@ using Xamarin.Forms;
 
 namespace Foodatory1
 {
-    public partial class InventoriesPage : ContentPage
+    public partial class Recipe1 : ContentPage
+
     {
         public ObservableCollection<string> Items { get; set; }
-        public InventoriesPage()
+
+        public Recipe1()
         {
+
             InitializeComponent();
 
-            listView.ItemsSource = new[] { "Inventory1", "Inventory2", "Inventory3" };
+            listView.ItemsSource = new[] { "Recipe1", "Recipe2", "Recipe3" };
         }
 
         public void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -39,3 +42,4 @@ namespace Foodatory1
         }
     }
 }
+

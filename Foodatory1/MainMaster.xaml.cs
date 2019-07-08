@@ -24,7 +24,7 @@ namespace Foodatory1
 
         void Recipe_Handle_Clicked(object sender, System.EventArgs e)
         {
-            myMaster.Detail = new NavigationPage(new RecipePage());
+            myMaster.Detail = new NavigationPage(new Recipe1());
             myMaster.IsPresented = false;
 
         }
