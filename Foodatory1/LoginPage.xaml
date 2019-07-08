@@ -29,7 +29,7 @@
             <Button Text="New User?" TextColor="#1A4242"  FontSize="20" Margin="30" HorizontalOptions="Center" Clicked="OnSignupLabel"/>
               </StackLayout>
               <StackLayout Grid.Row="4" Padding="50">
-                <Button Text="Skip>>>" TextColor="#1A4242" Font="20" Clicked="Handle_Clicked1"/>
+                <!--<Button Text="Skip>>>" TextColor="#1A4242" Font="20" Clicked="Handle_Clicked1"/>-->
               </StackLayout>
         </Grid>
     </ContentPage.Content>
