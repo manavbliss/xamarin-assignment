@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodatory1.AddRecipe">
+    <ContentPage.Content>
+       
+        <StackLayout BackgroundColor="#FEBD59">
+            <Button HorizontalOptions="Start" Margin="10,40,0,0" Clicked="back" Text=""  TextColor="#ffffff" Image="back.png"/>
+             <StackLayout Margin="20">
+            <Label Text="ADD RECIPE" FontSize="25" TextColor="#ffffff" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="name" Placeholder="Recipe Name" HeightRequest="40" ></Entry>
+        <Entry x:Name="procedure" Placeholder="Description" HeightRequest="40"></Entry>
+        <Entry x:Name="ingredients" Placeholder="Ingredients" HeightRequest="40"></Entry>
+
+                  <Button Text="Save" BackgroundColor="#002E62" TextColor="#ffffff"  Clicked="Add" FontSize="20" HeightRequest="45" Margin="0,20,0,0" />
+        </StackLayout>
+
+         
+            </StackLayout>
+        
+        
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

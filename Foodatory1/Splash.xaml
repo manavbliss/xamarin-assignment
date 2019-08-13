@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodatory1.Splash">
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal" BackgroundColor="#E4E4E4" >
-        <Image Source="logo.png" x:Name="logoImage" HeightRequest="100" WidthRequest="400" 
+        <StackLayout Orientation="Horizontal" BackgroundColor="#FEBD59" >
+        <Image Source="food.png" x:Name="logoImage" HeightRequest="100" WidthRequest="400" 
                VerticalOptions="FillAndExpand"
                 
                HorizontalOptions="FillAndExpand" ></Image>

@@ -137,5 +137,14 @@
   <ItemGroup>
     <BundleResource Include="Resources\logo.png" />
     <BundleResource Include="Resources\dicon.png" />
+    <BundleResource Include="Resources\newlogo.png" />
+    <BundleResource Include="Resources\food.png" />
+    <BundleResource Include="Resources\rbanner.png" />
+    <BundleResource Include="Resources\r.png" />
+    <BundleResource Include="Resources\i.png" />
+    <BundleResource Include="Resources\inventory.png" />
+    <BundleResource Include="Resources\inventor.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\bann.jpg" />
   </ItemGroup>
 </Project>

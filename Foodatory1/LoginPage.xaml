@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodatory1.LoginPage" Title="Login Page" BackgroundColor="#E4E4E4">
     <ContentPage.Content>
-        <Grid >
+        <StackLayout BackgroundColor="#FEBD59" >
             
             
-               <StackLayout  Grid.Row="0" Orientation="Horizontal" BackgroundColor="#E4E4E4">
-        <Image Source="logo.png" x:Name="logoImage" HeightRequest="100" WidthRequest="400" 
+               <StackLayout  Orientation="Horizontal" BackgroundColor="#FEBD59" HeightRequest="400">
+        <Image Source="food.png" x:Name="logoImage" HeightRequest="100" WidthRequest="400" 
                VerticalOptions="FillAndExpand"
                 
                HorizontalOptions="FillAndExpand" ></Image>
     </StackLayout>
-            <StackLayout Grid.Row="3" >
-                <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center" Padding="100">
-                      </StackLayout>
-            </StackLayout>
-            <StackLayout Grid.Row="1" VerticalOptions="Center" Padding="20" >
+           
+            <StackLayout VerticalOptions="Center" Padding="20" >
                 
                 
             
-                <Entry Placeholder="User Name" BackgroundColor="#ffffff" HeightRequest="45" />
-                <Entry Placeholder="Password" BackgroundColor="#ffffff" HeightRequest="45" IsPassword="true" />
-             <Button Text="Forgot Password" TextColor="#1A4242" Font="15" HorizontalOptions="End" Padding="0,-20,0,0"/>
+                <Entry x:Name="username" Placeholder="User Name" BackgroundColor="#ffffff" HeightRequest="45" />
+                <Entry x:Name="password" Placeholder="Password" BackgroundColor="#ffffff" HeightRequest="45" IsPassword="true" />
+             <Button Text="Forgot Password?" TextColor="#1A4242" Font="15" HorizontalOptions="End" Padding="0,-20,0,0"/>
             
             
             </StackLayout>
-            <StackLayout Grid.Row="2" Padding="20,40,20,20">
-                <Button Text="Sign In" BackgroundColor="#1A4242" TextColor="#ffffff"  Clicked="Handle_Clicked" FontSize="20" HeightRequest="45"/>
-            <Button Text="New User?" TextColor="#1A4242"  FontSize="20" Margin="30" HorizontalOptions="Center" Clicked="OnSignupLabel"/>
+            <StackLayout  Padding="20,40,20,20">
+                <Button Text="Sign In" BackgroundColor="#002E62" TextColor="#ffffff"  Clicked="onSignIn" FontSize="20" HeightRequest="45"/>
+            <Button Text="Don't have an account? Sign Up Now" TextColor="#002E62"  FontSize="18" Margin="20" HorizontalOptions="Center" Clicked="OnSignupLabel"/>
               </StackLayout>
-              <StackLayout Grid.Row="4" Padding="50">
+              <StackLayout Padding="50">
                 <!--<Button Text="Skip>>>" TextColor="#1A4242" Font="20" Clicked="Handle_Clicked1"/>-->
               </StackLayout>
-        </Grid>
+       </StackLayout>
     </ContentPage.Content>
 </ContentPage>

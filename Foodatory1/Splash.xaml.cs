@@ -20,7 +20,7 @@ namespace Foodatory1
 
 
 
-            await Task.Delay(3000);
+            await Task.Delay(5000);
 
             await Navigation.PushModalAsync(new LoginPage());
 

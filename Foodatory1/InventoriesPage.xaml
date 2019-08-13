@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Foodatory1.InventoriesPage" Title="Inventories">
-   <ListView x:Name="listView" ItemSelected="OnItemSelected" RowHeight="60" BackgroundColor="#E4E4E4">
+   <ListView x:Name="listView" ItemSelected="OnItemSelected" RowHeight="60" BackgroundColor="#ffffff">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
-                    <ViewCell.ContextActions>
-                        <MenuItem Clicked="OnMore" CommandParameter="{Binding .}" Text="More" />
-                        <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
-                    </ViewCell.ContextActions>
-                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
-                        <StackLayout Padding="5,0,0,5" VerticalOptions="StartAndExpand" Orientation="Vertical">
-                            <Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Large" TextColor="#1A4242"/>
-                            <Label Text="Description" VerticalTextAlignment="Center" FontSize="Small"  TextColor="#1A4242"/>
-                        </StackLayout>
-                        
-                    </StackLayout>
-                </ViewCell>
+       
+               <TextCell Text="{Binding name}" TextColor="#002E62"></TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

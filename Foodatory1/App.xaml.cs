@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Foodatory1;
+using Foodatory1.Models;
 
 namespace Foodatory1
 {
@@ -36,7 +37,31 @@ namespace Foodatory1
 
                 }
 
-            public void OnLoginLabel()
+         public void OnSignUp()
+         {
+            
+               MainPage = new LoginPage();
+
+         }
+        public void OnAddRecipe()
+        {
+            MainPage = new AddRecipe();
+        }
+        public void OnAddInventory()
+        {
+            MainPage = new AddInventory();
+        }
+        
+        public void OnRecipeDetails(string name,string procedure,string ingredients)
+        {
+
+            //await Navigation.PushAsync(new RecipeDetails(name, procedure, ingredients));
+         //  MainPage = new RecipeDetails(name,procedure,ingredients);
+
+            MainPage = new RecipeDetails(name, procedure, ingredients);
+        }
+
+        public void OnLoginLabel()
             {
                 MainPage = new LoginPage();
 
@@ -71,6 +96,10 @@ namespace Foodatory1
             {
                 // Handle when your app resumes
             }
+        public void OnBack()
+        {
+            MainPage = new AfterLoginPage();
         }
+    }
     }
 

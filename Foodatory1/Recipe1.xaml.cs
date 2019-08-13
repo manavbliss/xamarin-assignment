@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using Foodatory1.Models;
+using Foodatory1.Services;
 using Xamarin.Forms;
 
 namespace Foodatory1
@@ -10,20 +12,39 @@ namespace Foodatory1
 
     {
         public ObservableCollection<string> Items { get; set; }
+        FirebaseService service;
 
         public Recipe1()
         {
 
             InitializeComponent();
+            service = new FirebaseService();
 
-            listView.ItemsSource = new[] { "Recipe1", "Recipe2", "Recipe3" };
         }
 
+        protected async override void OnAppearing()
+        {
+            Console.WriteLine("Recipe On Appearing");
+            base.OnAppearing();
+            List<Recipe> recipes = await service.GetAllRecipes();
+            foreach(Recipe r in recipes)
+            {
+                Console.WriteLine("Name:: "+r.name);
+            }
+            listView.ItemsSource = recipes;
+            //your code here;
+
+        }
         public void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null) return; // has been set to null, do not 'process' tapped event
-            DisplayAlert("Tapped", e.SelectedItem + " row was tapped", "OK");
-            //((ListView)sender).SelectedItem = null; // de-select the row
+            if (e.SelectedItem == null) return; 
+            Recipe r = (Foodatory1.Models.Recipe)e.SelectedItem;
+
+           
+            var myApp = Application.Current as App;
+            myApp.OnRecipeDetails(r.name,r.procedure,r.ingredients);
+
+
         }
         public void OnMore(object sender, EventArgs e)
         {
